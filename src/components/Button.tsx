@@ -33,11 +33,11 @@ export default function Button({
     <button className={classes} disabled={disabled}>
       {icon !== 'only' ?
         <>
-          {(icon === 'left') || (icon === "both") ? <Star /> : null}
+          {(icon === 'left') || (icon === "both") ? <Star size={size === 'xxl' ? 'large' : 'small'} /> : null}
           {children}
-          {(icon === 'right') || (icon === "both") ? <Star /> : null}
+          {(icon === 'right') || (icon === "both") ? <Star size={size === 'xxl' ? 'large' : 'small'} /> : null}
         </>
-      : <Star />}
+      : <Star size={size === 'xxl' ? 'large' : 'small'} />}
     </button>
   );
 }
