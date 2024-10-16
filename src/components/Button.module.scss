@@ -14,6 +14,7 @@
   align-items: center;
   text-wrap: nowrap;
   border-radius: 4px;
+  border: 0.5px solid transparent;
   transition: background 0.3s ease,
   color 0.3s ease,
   border-width 0.3s ease,
@@ -25,14 +26,24 @@
     box-shadow: none;
   }
 
-  svg {
-    fill: currentColor;
-    width: 18px;
-    height: 18px;
+  span {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+  svg {
+    fill: currentColor;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2px;
 }
 
 .primary {
@@ -117,7 +128,7 @@
   gap: 4px;
 
   &:not(.link) {
-    padding: 10px 14px;
+    padding: 9px 13.5px;
   }
 }
 
@@ -127,7 +138,7 @@
   gap: 6px;
 
   &:not(.link) {
-    padding: 10px 16px;
+    padding: 9px 16px;
   }
 }
 
@@ -137,7 +148,7 @@
   gap: 6px;
 
   &:not(.link) {
-    padding: 12px 20px;
+    padding: 11px 20px;
   }
 }
 
@@ -147,11 +158,11 @@
   gap: 10px;
 
   &:not(.link) {
-    padding: 16px 24px;
+    padding: 15px 23px;
   }
 }
 
-.iconOnly {
+.iconOnly:not(.link) {
   &.m {
     padding: 10px;
   }
@@ -165,7 +176,16 @@
   }
 
   &.xxl {
-    padding: 16px;
+    padding: 15px;
+  }
+}
+
+.iconOnly {
+  &.xxl {
+    span {
+      width: 24px;
+      height: 24px;
+    }
 
     svg {
       width: 20px;
@@ -177,6 +197,8 @@
 .link {
   color: var(--cl-primary);
   background: transparent;
+  padding: 0;
+  border: 0;
 
   &:not(:disabled) {
     &:hover, &:focus {

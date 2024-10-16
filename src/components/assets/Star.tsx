@@ -4,7 +4,7 @@ interface IconProps {
 
 export default function Star({size}: IconProps) {
 
-  return (<>
+  return (<span>
     {size === "large" ?
       <svg viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -17,7 +17,7 @@ export default function Star({size}: IconProps) {
         />
       </svg>
     }
-  </>);
+  </span>);
 }
 
 

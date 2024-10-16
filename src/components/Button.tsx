@@ -34,7 +34,7 @@ export default function Button({
       {icon !== 'only' ?
         <>
           {(icon === 'left') || (icon === "both") ? <Star size={size === 'xxl' ? 'large' : 'small'} /> : null}
-          {children}
+          <span className={styles.content}>{children}</span>
           {(icon === 'right') || (icon === "both") ? <Star size={size === 'xxl' ? 'large' : 'small'} /> : null}
         </>
       : <Star size={size === 'xxl' ? 'large' : 'small'} />}
